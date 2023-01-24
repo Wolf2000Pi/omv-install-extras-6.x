@@ -50,7 +50,7 @@ sleep 3 &&
 # non-free
 cd /root/ &&
 sed -i -e "s/ main[[:space:]]*\$/ main contrib non-free/" /etc/apt/sources.list &&
-at update &&
+apt update &&
 apt upgrade &&
 # OMV extras
 
