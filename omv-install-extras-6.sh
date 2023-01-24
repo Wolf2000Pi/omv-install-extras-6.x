@@ -5,7 +5,7 @@ echo
 echo -e "\033[36m Autoinstaller für Openmediavault 4.x und Extras.org\033[0m"
 echo
 echo -e "\033[36m Author:     Wolf2000\033[0m"
-echo -e "\033[36m Version:         1.1\033[0m"
+echo -e "\033[36m Version:         1.8\033[0m"
 echo -e "\033[36m https://forum-bpi.de\033[0m"
 echo -e "\033[31m Achtung das ist eine OMV-Test es kann eventuell nicht lauffähig sein \033[0m"
 echo
