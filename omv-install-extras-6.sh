@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+
+
 #Openmediavault 6
 echo
 echo -e "\033[36m Autoinstaller für Openmediavault 4.x und Extras.org\033[0m"
@@ -16,7 +18,8 @@ read answer
 echo  Ihre Antwort war: $answer
 # if [ "$answer" = "j" ]
 if [ "$answer" != "n" ]
-  then echo apt-get install --yes gnupg &&
+  then echo apt imstall wget &&
+apt-get install --yes gnupg &&
 wget -O "/etc/apt/trusted.gpg.d/openmediavault-archive-keyring.asc" https://packages.openmediavault.org/public/archive.key &&
 apt-key add "/etc/apt/trusted.gpg.d/openmediavault-archive-keyring.asc" &&
 
@@ -50,7 +53,7 @@ sed -i -e "s/ main[[:space:]]*\$/ main contrib non-free/" /etc/apt/sources.list 
 at update &&
 apt upgrade &&
 # OMV extras
-apt imstall wget &&
+
 wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash &&
   
 echo
