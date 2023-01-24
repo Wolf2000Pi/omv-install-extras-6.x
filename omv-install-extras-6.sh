@@ -48,7 +48,7 @@ apt-get --yes --auto-remove --show-upgraded \
 apt-get update &&
 sleep 3 &&
 # non-free
-cd /root/
+cd /root/ &&
 sed -i -e "s/ main[[:space:]]*\$/ main contrib non-free/" /etc/apt/sources.list &&
 at update &&
 apt upgrade &&
