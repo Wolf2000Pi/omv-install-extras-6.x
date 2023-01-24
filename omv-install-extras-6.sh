@@ -47,15 +47,17 @@ apt-get --yes --auto-remove --show-upgraded \
 #    omv-confdbadm populate &&
 apt-get update &&
 sleep 3 &&
-# non-free
+
+# OMV extras
+
+wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash &&
+
+ # non-free
 cd /root/ &&
 sed -i -e "s/ main[[:space:]]*\$/ main contrib non-free/" /etc/apt/sources.list &&
 apt update &&
 apt upgrade &&
-# OMV extras
-
-wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash &&
-  
+ 
 echo
 echo
 echo -e "\033[32m Das wars Openmediavult und Extras.org ist jetzt Installiert\033[0m"
