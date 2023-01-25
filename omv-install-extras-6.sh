@@ -49,7 +49,55 @@ sleep 3 &&
 
 # OMV extras
 
-wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/install | bash &&
+if [[ $(id -u) -ne 0 ]]; then
+  echo "This script must be executed as root or using sudo."
+  exit 99
+fi
+
+declare -i version
+
+url="https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/master/"
+
+version=$(dpkg -l openmediavault | awk '$2 == "openmediavault" { print substr($3,1,1) }')
+
+echo ${version}
+
+if [ ${version} -lt 5 ]; then
+  echo "Unsupported version of openmediavault"
+  exit 0
+fi
+
+list="/etc/apt/sources.list.d/omvextras.list"
+if [ -f "${list}" ]; then
+  rm ${list}
+fi
+
+echo "Downloading omv-extras.org plugin for openmediavault ${version}.x ..."
+file="openmediavault-omvextrasorg_latest_all${version}.deb"
+
+echo "Updating repos before installing..."
+apt-get update
+
+echo "Install prerequisites..."
+apt-get --yes --no-install-recommends install dirmngr gnupg
+
+if [ -f "${file}" ]; then
+  rm ${file}
+fi
+wget ${url}/${file}
+if [ -f "${file}" ]; then
+  dpkg -i ${file}
+
+  if [ $? -gt 0 ]; then
+    echo "Installing other dependencies ..."
+    apt-get -f install
+  fi
+
+  echo "Updating repos ..."
+  apt-get update
+else
+  echo "There was a problem downloading the package."
+fi &&
 
  # non-free
 cd /root/ &&
