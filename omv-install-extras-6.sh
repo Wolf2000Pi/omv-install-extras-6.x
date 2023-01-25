@@ -100,6 +100,7 @@ else
   echo "There was a problem downloading the package."
 fi &&
 dpkg -i openmediavault-omvextrasorg_latest_all6.deb &&
+apt install openmediavault-omvextrasorg_latest_all6.deb &&
 
  # non-free
 cd /root/ &&
