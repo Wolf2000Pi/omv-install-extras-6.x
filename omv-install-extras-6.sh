@@ -14,7 +14,7 @@ echo
 echo -e "\033[32m Wolle sie Openmediaut mit Plugins installieren\033[0m"
 echo -e "\033[32m Ihre Antwort, n/j:\033[0m"
 read answer
-#echo Das installieren wurde abgebrochen
+echo Das installieren wurde abgebrochen
 echo  Ihre Antwort war: $answer
 # if [ "$answer" = "j" ]
 if [ "$answer" != "n" ]
@@ -44,7 +44,7 @@ apt-get --yes --auto-remove --show-upgraded \
     --option DPkg::Options::="--force-confdef" \
     --option DPkg::Options::="--force-confold" \
     install openmediavault-keyring openmediavault &&
-#    omv-confdbadm populate &&
+    omv-confdbadm populate &&
 apt-get update &&
 sleep 3 &&
 
