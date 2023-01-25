@@ -55,7 +55,7 @@ wget -O - https://github.com/OpenMediaVault-Plugin-Developers/packages/raw/maste
 cd /root/ &&
 sed -i -e "s/ main[[:space:]]*\$/ main contrib non-free/" /etc/apt/sources.list &&
 apt update &&
-apt upgrade &&
+apt upgrade --yes &&
  
 echo
 echo
