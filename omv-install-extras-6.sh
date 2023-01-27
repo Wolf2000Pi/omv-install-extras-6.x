@@ -19,7 +19,8 @@ echo  Ihre Antwort war: $answer
 # if [ "$answer" = "j" ]
 if [ "$answer" != "n" ]
   then echo apt imstall wget &&
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" &&  
+su -
+#export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" &&  
 apt-get install --yes gnupg &&
 wget -O "/etc/apt/trusted.gpg.d/openmediavault-archive-keyring.asc" https://packages.openmediavault.org/public/archive.key &&
 apt-key add "/etc/apt/trusted.gpg.d/openmediavault-archive-keyring.asc" &&
@@ -101,7 +102,7 @@ else
   echo "There was a problem downloading the package."
 fi &&
 dpkg -i openmediavault-omvextrasorg_latest_all6.deb &&
-apt install openmediavault-omvextrasorg_latest_all6.deb &&
+#apt install openmediavault-omvextrasorg_latest_all6.deb &&
 
  # non-free
 cd /root/ &&
