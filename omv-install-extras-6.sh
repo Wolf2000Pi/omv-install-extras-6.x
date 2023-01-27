@@ -47,7 +47,7 @@ apt-get --yes --auto-remove --show-upgraded \
 	omv-confdbadm populate &&
 apt-get update &&
 sleep 3 &&
-#export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" &&
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" &&
 # OMV extras
 
 if [[ $(id -u) -ne 0 ]]; then
