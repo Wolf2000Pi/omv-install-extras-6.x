@@ -1,7 +1,7 @@
 # omv-install-extras-6.x
 Openmediavault + Extras install-Tool.
 ```
-apt installwget && wget -O - https://raw.githubusercontent.com/Wolf2000Pi/omv-install-extras-6.x/main/omv-install-extras-6.sh | bash
+apt install wget && wget -O - https://raw.githubusercontent.com/Wolf2000Pi/omv-install-extras-6.x/main/omv-install-extras-6.sh | bash
 ```
 or
 ```
