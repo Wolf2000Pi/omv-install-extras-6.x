@@ -7,8 +7,10 @@ or
 ```
 apt install git && git clone https://github.com/Wolf2000Pi/omv-install-extras-6.x && cd omv-install-extras-6.x && chmod +x omv-install-extras-6.sh && ./omv-install-extras-6.sh
 
-Der installer wurde nicht für Pi und Boards geschrieben!  Ich habe es getestet Hyper-V und HP-PC.!
-The installer was not written for Pi and boards! I tested it Hyper-V and HP-PC.!
+Der installer wurde nicht für Pi und Boards geschrieben!  
+Ich habe es getestet Hyper-V und HP-PC.! auf Netzwerkinstallation von einer Minimal-CD!
+The installer was not written for Pi and boards! 
+I tested it Hyper-V and HP-PC.! on network installation from a minimal CD!
 
 ```
 [![paypal](https://www.paypalobjects.com/de_DE/AT/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=MDV3LUKEPG9KN)
