@@ -8,9 +8,9 @@ or
 apt install git && git clone https://github.com/Wolf2000Pi/omv-install-extras-6.x && cd omv-install-extras-6.x && chmod +x omv-install-extras-6.sh && ./omv-install-extras-6.sh
 ```
 
-Achtung es gibt keinen Support über das Forum Openmediavault
+**Achtung** es gibt keinen Support über das Forum Openmediavault
 
-Attention, there is no support via the Openmediavault forum
+**Attention**, there is no support via the Openmediavault forum
 
 Der installer wurde nicht für Pi und Boards geschrieben! 
 
